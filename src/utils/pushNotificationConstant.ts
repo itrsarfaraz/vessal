@@ -1,0 +1,10 @@
+export const INSPECTION_SCHEDULED_TITLE = "Inspection Scheduled for {{vessel_name}}";
+export const INSPECTION_SCHEDULED_TEXT = "A new inspection is scheduled on {{inspection_date}} at {{port_name}}.";
+export const STATUS_UPDATE_TITLE = "Inspection {{inspection_ID}} Status Update for {{vessel_name}}";
+export const STATUS_UPDATE_TEXT = "Inspection {{inspection_ID}} status is now {{current_status}}.";
+export const ACTION_PLAN_UPDATED_TITLE = "Action Plan Updated for {{vessel_name}}";
+export const ACTION_PLAN_UPDATED_TEXT = "{{user_name}} updated observation {{question_ID}} in the action plan for {{inspection_ID}}.";
+export const ACTION_PLAN_APPROVED_REQUEST_TITLE = "Approval Needed for Action on {{vesselName}}";
+export const ACTION_PLAN_APPROVED_REQUEST_TEXT = "{{userName}} requests approval for completed action on observation {{questionID}}.";
+export const ACTION_APPROVED_TITLE="Completion of Observation {{questionID}} Approved";
+export const ACTION_APPROVED_TEXT="{{userName}} approved the completion of observation {{questionID}}."

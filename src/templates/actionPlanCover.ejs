@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Action Plan Report</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+    html {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .page {
+      page-break-after: always;
+    }
+
+    body {
+      page-break-after: always;
+    }
+
+    #header,
+    #footer {
+      padding: 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body style="margin: 0;">
+    <div style="width: 100%;background-color: #fff;">
+      <!-- Welcome page -->
+      <section id="cover">
+        <div style="background-color: #fff">
+          <div style="padding: 50px 0; text-align: center">
+            <img src="https://costamarestage.azurewebsites.net/assets/images/logo/CM-logo-black_black.svg"
+              alt="Vessel Inspection Logo" style="max-width: 250px; margin: auto" />
+          </div>
+          <div style="
+                background-color: #1a222d;
+                color: white;
+                padding: 30px 0px 0px 0;
+                text-align: center;
+              ">
+            <div style="padding: 25px 20px 0px 20px">
+              <h3 style="font-size: 25px;margin-bottom: 0;margin-top: 0;  font-family: 'Open Sans', sans-serif;">
+                <%= quarter %>
+              </h3>
+              <h1
+                style="font-weight: bold; font-size: 30px;margin-bottom: 0;margin-top: 0;  font-family: 'Oswald', sans-serif;">
+                Action Plan Report
+              </h1>
+
+              <div style="margin: 60px 0">
+                <h1
+                  style="font-weight: bold; font-size: 60px;margin-bottom: 0;margin-top: 0;text-transform: uppercase;  font-family: 'Oswald', sans-serif;">
+                  <%= vessel.vesselName %>
+                </h1>
+                <h3 style="font-size: 25px;margin-top: 0;  font-family: 'Oswald', sans-serif;">IMO: <%= vessel.imoNo %>
+                </h3>
+              </div>
+              <h3 style="margin-top: 24px; margin-bottom: 100px; font-size: 25px;font-family: 'Open Sans', sans-serif;">
+                Inspected <%= inspectionDate?.toLocaleDateString('en-US', { day: 'numeric' , month: 'short' ,
+                  year: 'numeric' }) %> at <%= startPort?.name %> - <%= destinationPort?.name %> <br />
+                      by <%= user?.fullName %>
+              </h3>
+            </div>
+            <div style="display: flex;margin-top: 149px; justify-content: flex-end">
+              <img src="<%= vessel.image_url %>" alt="image" style="
+                    width: 90%;
+                    height: 360px;
+                    border-radius: 500px 0px 0px 500px;
+                  " />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </body>
+
+
+</html>

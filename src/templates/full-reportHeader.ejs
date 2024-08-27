@@ -1,0 +1,59 @@
+<style>
+ 
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact !important;
+  }
+
+  .page {
+    page-break-after: always;
+  }
+
+  #header,
+  #footer {
+    padding: 0 !important;
+  }
+</style>
+
+<div style="width: 100%; background-color: #192333;" class="header-bg header first-page">
+  <div style="
+      background-color: #192333;
+      padding: 20px 40px;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    ">
+    <div style="display: flex; align-items: center">
+      <img src="data:image/svg+xml;base64,<%= base64 %>" alt="SVG Image" style="width: 60%; height: auto" />
+    </div>
+    <div style="margin-bottom: 5px; margin-top: 0">
+      <label style="font-size: 14px; font-weight: 600; margin-top: 0;font-family: 'Open Sans', sans-serif;">Vessel</label>
+      <h6 style="font-size: 17px; margin-bottom: 0; margin-top: 0;font-family: 'Open Sans', sans-serif;font-weight: 200;">
+        <%= vessel ? vessel.vesselName : 'N/A' %>
+      </h6>
+    </div>
+    <div style="margin-bottom: 5px">
+      <label style="
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 0;
+          margin-top: 0;font-family: 'Open Sans', sans-serif;
+        ">Reference</label>
+      <h6 style="font-size: 17px; margin-bottom: 0; margin-top: 0;font-family: 'Open Sans', sans-serif;font-weight: 200;">
+        <%= uniqueId ? 'INS-' + uniqueId : 'N/A' %>
+      </h6>
+    </div>
+    <div>
+      <label style="
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 0;
+          margin-top: 0;font-family: 'Open Sans', sans-serif;
+        ">Date</label>
+      <h6 style="font-size: 17px; margin-bottom: 0; margin-top: 0;font-family: 'Open Sans', sans-serif; font-weight: 200;">
+        <%= formattedInspectionDate %>
+      </h6>
+    </div>
+  </div>
+</div>
